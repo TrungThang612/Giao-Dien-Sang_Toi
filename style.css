@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    width: 0%;
+    height:100vh;
+    background-color: black;
+    transition: width 0.5s;
+}
+
+.background.change {
+    width: 100%;
+    height: 100vh;
+}
+
+.sence {
+    color: black;
+    width: 250px;
+    height: 300px;
+    border: 1px solid ;
+    z-index: 10; 
+    transition: 0.25s;
+    border-radius: 10px;
+}
+
+.sence.change{
+    color: aliceblue;
+}
+.pic {
+    position: relative;
+    margin: 10px auto;
+    width: 200px;
+}
+
+.pic_main {
+    width: 150px;
+    height: 150px;
+    margin: 25px auto;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.pic_support {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    top: 0;
+    right: 5px;
+    transition: width .5s, height .5s, background-color .5s ease-in-out;
+}
+
+.pic_support.change {
+    width: 130px;
+    height: 130px;
+    background-color: black;
+
+}
+
+.active {
+    position: relative;
+    border-radius: 100em;
+    border: 1px solid;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.active_dot {
+    position: absolute;
+    height: 46px;
+    width: 46px;
+    background-color: aqua;
+    border-radius: 50%;
+    top: 2px;
+    transform: translateX(2px);
+    transition: 0.5s;
+
+}
+
+.active_dot.change {
+    transform: translateX(51px);
+}
